@@ -20,7 +20,7 @@ createApp({
         return{
 
             activeIndex : 1,
-            slides : [
+            slides :[
             {
                 image: 'img/01.webp',
                     title: 'Marvel\'s Spiderman Miles Morale',
@@ -69,7 +69,13 @@ createApp({
             if (this.activeIndex < 0  ) {
                 this.activeIndex =  this.slides.length -1;
             }
+        },
+
+        clickedOnSlide(clickIndex){
+
+            this.activeIndex = clickIndex
         }
+
 
         
     }
