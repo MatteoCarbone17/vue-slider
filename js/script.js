@@ -18,8 +18,8 @@ const { createApp } = Vue ;
 createApp({
     data(){
         return{
-
-            activeIndex : 1,
+            timer : 0 , 
+            activeIndex : 0,
             slides :[
             {
                 image: 'img/01.webp',
@@ -70,6 +70,10 @@ createApp({
                 this.activeIndex =  this.slides.length -1;
             }
         },
+
+        startSlide() {
+            this.timer = setInterval(this.nextSlide, 4000);
+          },
 
         clickedOnSlide(clickIndex){
 
